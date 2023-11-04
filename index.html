@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Gui :: Water Reminder</title>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <span class="title">Gui :: Water Reminder</span>
+        <div class="links">
+          <a
+            class="link"
+            href="https://github.com/guilhermeal"
+            title="Visit my Github"
+          >
+            <img
+              src="https://github.com/guilhermeal.png"
+              alt="Github"
+              srcset=""
+            />
+          </a>
+        </div>
+      </nav>
+      <div class="container">
+        <section class="content">
+          <div class="options-container">
+            <div class="questions">
+              <div class="question">
+                <label for="liters-needed"
+                  >How many liters do you need per day?</label
+                >
+                <input
+                  type="number"
+                  name="liters-needed"
+                  id="liters-needed"
+                  class="input input-liters"
+                  min="0"
+                  max="10"
+                  value="3"
+                />
+              </div>
+              <div class="question">
+                <label for="liters-needed"
+                  >How many milliliters is your bottle?</label
+                >
+                <input
+                  type="number"
+                  name="bottle-support"
+                  id="bottle-support"
+                  class="input input-liters"
+                  min="0"
+                  max="1000"
+                  value="500"
+                />
+              </div>
+              <div class="question">
+                <label for="liters-needed"
+                  >How many hours do you need drink this liters?</label
+                >
+                <input
+                  type="number"
+                  name="hours"
+                  id="hours"
+                  class="input input-liters"
+                  min="0"
+                  max="24"
+                  value="6"
+                />
+              </div>
+            </div>
+            <button class="btn" onclick="handleSetLiters()">Set</button>
+          </div>
+
+          <div class="title">Water drank</div>
+          <div class="waterContainer">
+            <div class="wave1"></div>
+            <div class="wave2"></div>
+            <span id="value">0</span>
+          </div>
+          <span id="delay"></span>
+          <div class="cupsContainer"></div>
+          <div class="progressbars">
+            <progress
+              id="progressbar"
+              class="progressbar"
+              value="0"
+              max="100"
+            ></progress>
+            <progress
+              id="progresstimer"
+              class="progresstimer"
+              value="0"
+              max="100"
+            ></progress>
+          </div>
+          <div class="buttons-container">
+            <button class="btn decrease">-500ml</button>
+            <button class="btn reset">Reset</button>
+            <button class="btn increase">+500ml</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

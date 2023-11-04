@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  height: 100vh;
+}
+
+nav {
+  width: 100%;
+  background-color: gray;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+nav .title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+
+nav a img {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  background-color: #1c637c;
+  flex-direction: column;
+}
+
+main .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+  color: white;
+  z-index: 2;
+}
+
+.content .title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+#value {
+  font-size: 8rem;
+  z-index: 10;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.options-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.input {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.input:focus {
+  color: white;
+  background-color: gray;
+}
+
+.input-liters {
+  width: 5rem;
+  text-align: center;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.question label {
+  font-size: 1.2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.progressbars {
+  display: flex;
+  flex-direction: column;
+  gap: -2rem;
+}
+
+.progresstimer {
+  width: 50vw;
+}
+
+.progressbar {
+  width: 50vw;
+}
+
+progress {
+  height: 3rem;
+}
+
+.waterContainer {
+  width: 300px;
+  height: 350px;
+  background-color: #80c5de;
+  border-radius: 0 0 40px 40px;
+  box-shadow: inset 0 0 50px #1c637c;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+}
+
+.wave1 {
+  position: absolute;
+  content: "";
+  width: 200%;
+  height: 200%;
+  background-color: #ececec;
+  top: -80%;
+  left: -50%;
+  border-radius: 60%;
+  animation: wave 12s infinite linear;
+  z-index: 1;
+}
+
+.wave2 {
+  position: absolute;
+  content: "";
+  width: 204%;
+  height: 204%;
+  background-color: #ececec80;
+  top: -80%;
+  left: -52%;
+  border-radius: 60%;
+  animation: wave 12s infinite linear;
+  animation-delay: 0.5s;
+  z-index: 2;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cup {
+  width: 2rem;
+  filter: invert(100%) sepia(0%) saturate(1191%) hue-rotate(158deg)
+    brightness(100%) contrast(101%);
+}
+
+.cupFull {
+  width: 2rem;
+  filter: invert(47%) sepia(100%) saturate(1192%) hue-rotate(158deg)
+    brightness(89%) contrast(102%);
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.btn:active {
+  background-color: gray;
+}
+
+.zoom-in-out-box {
+  animation: zoom-in-zoom-out 180ms linear;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  50% {
+    transform: scale(2.5, 2.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
